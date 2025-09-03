@@ -1,0 +1,6 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>udem.IFT2255.A25.A.LionnelSelikOualid</groupId>
+    <artifactId>projet_de_gestion_municipale</artifactId>
+    <version>1</version>
+</project>
