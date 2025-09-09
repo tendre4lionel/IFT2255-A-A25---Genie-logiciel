@@ -1,0 +1,58 @@
+This document serves to highlight some steps we need to take to get the project going.
+We already have a basic skeleton structure from which to work off of, so that's good at least.
+We also have a common communication venue, through whatsapp, thought it may not be sufficient.
+
+We need a way to keep track of what want to do, who is doing it, and how they can let the rest of the group know their progress.
+We also need to get together and actually decide what exactly we want to do.
+While the project in general is pretty well-defined, the exact semantics of the implementation are not, neither are the specific details added in.
+
+
+Following with the steps, we are currently in the planification step.
+We already have the team planned out; Lionnel, Selik, Oualid, 'AlienMG'(I have yet to learn your name, but feel free to add it in)
+The next thing will be to have a discussion, either live or through the chat, to decide on what to do.
+We should start by having a general discussion, introducing ourselves and all that, but also touching on our abilities and knowledge in terms of code.
+
+
+A note on the setup. To connect intelliJ to the database, simply go file>new>project from version control system, then enter the git url for your branch (which you will have branched off of the main earlier)
+The link can be obtained by clicking the green 'code' button. The default setup (http,local) should give you the right link.
+
+
+Discussion points;
+
+We will necessarily be tied down to the java infrastructure, but the execution can be done in a number of ways.
+The system will almost assuredly need some sort of server to save task information.
+There are ways to works around this, such as creating a peer-to-peer system, but this, personally, falls a little ways away from my abilities and knowledge.
+For this reason I will mainly be proposing server-based systems, although this is not a hard limit to the systems available for choice if something else is more interesting.
+
+[database server/host]
+The first question is whether we want to go with a prepared server or a coreless server.
+The difference is essentially using a Mysql or nosql server versus using are own data agregation protocol.
+For reasons of workload, security and complexity, I would heavily advise against creating our own protocol.
+I would instead suggest using either one of two paths; an apache mysql server, a mongoDB noSQL server.
+The apache server will be harder to find a host for, but will be more rigid, refusing incomplete data inputs.
+The mongoDB server will be trivial to set up, but is by nature flexible, and cannot be relied on to verify or sanitise data.
+
+[backend server/host]
+Next is the question of what type of backend server to use and which host to run it with.
+This server's purpose is to validate data being entered, validate the person entering said data, and prevent direct access to the database server.
+It can be codded in various languages, with common ones being php or javascript (with node-js servers), but java has it's owns.
+A lot of great tools exist for the creation of backend servers. for example, node-js has express-js, which vastly cuts down development time, down to mainly just data validation.
+Java has its own tools and packages, with which I will admit a lack of familiarity, even if I do assume an understanding of the general structure used by it.
+The host for the server created will also need to be considered.
+While it is technically possible to use any computer as a host, it is a dangerous practice which can leave said computer exposed to bad actors.
+Instead, there exists free hosts which can get servers online, with limitations in performance and/or memory.
+For example, render (https://render.com/) is a service which makes a local branch of a git repository and runs it.
+It provides https connection and an address (something like https://project-name.onrender.com).
+
+[Frontend/app]
+The frontend is probably the most 'customisable' part of the project, as it has a variety of mediums it an operate through.
+The first question is where it operates, meaning whether to make a frontend applet which runs in a browser, which can remove some ui work, or to make its own individual application.
+In the second case, there exist systems to alleviate the workload here too, such as javafx, which abstracts away a lot of the finer ui detail leaving mainly just classes, a bit like a java version of html's bootstrap.
+
+While the database-backend-frontend system is very good, it will involve more code separation which may not necessarily be ideal.
+It would be possible to produce a unified database-application system, but this would likely be more complex in planning, even if lighter in code.
+
+
+Another thing to think about is the exact details of what the application will do.
+As previously said, while we have general guidelines, I would wager that the details, beyond some required points, will be left to us.
+This mean we need to discuss what we want to add if anything, and how we want the app to work, both in terms of frontend and backend.
