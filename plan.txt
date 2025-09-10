@@ -13,10 +13,6 @@ The next thing will be to have a discussion, either live or through the chat, to
 We should start by having a general discussion, introducing ourselves and all that, but also touching on our abilities and knowledge in terms of code.
 
 
-A note on the setup. To connect intelliJ to the database, simply go file>new>project from version control system, then enter the git url for your branch (which you will have branched off of the main earlier)
-The link can be obtained by clicking the green 'code' button. The default setup (http,local) should give you the right link.
-
-
 Discussion points;
 
 We will necessarily be tied down to the java infrastructure, but the execution can be done in a number of ways.
@@ -56,3 +52,14 @@ It would be possible to produce a unified database-application system, but this 
 Another thing to think about is the exact details of what the application will do.
 As previously said, while we have general guidelines, I would wager that the details, beyond some required points, will be left to us.
 This mean we need to discuss what we want to add if anything, and how we want the app to work, both in terms of frontend and backend.
+
+
+
+A note on the setup. To connect intelliJ to the database, simply go file>new>project from version control system, then enter the git url for your branch (which you will have branched off of the main earlier)
+The link can be obtained by clicking the green 'code' button. The default setup (http,local) should give you the right link.
+You can then go git>update project. This will probably tell you to set up the upstream branch,
+    where you can select the main branch so that any updates to it are reflected to your local codebase,
+    or your own, in which case you can manually do merge pulls to get up to date in a controlled manner.
+Then, go to git>push, and click on the blue name, and replace main with your own branch to avoid pushing directly into main.
+The idea is that you push to your own git, so that the others can review,
+    and then after discussion/validation, your git gets pulled to the main, and the main pulled to the other gits.
