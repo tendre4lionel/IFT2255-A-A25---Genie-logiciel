@@ -21,6 +21,16 @@
             <version>5.12.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>21.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>21.0.4</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -34,9 +44,17 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>ca.udem.Main</mainClass>
+                            <mainClass>udem.IFT2255.A25.A.LionnelSelikOualid.Main</mainClass>
                         </manifest>
                     </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <mainClass>udem.IFT2255.A25.A.LionnelSelikOualid.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
